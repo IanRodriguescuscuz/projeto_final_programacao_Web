@@ -14,6 +14,8 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 li, a, button {
     font-family:"DM Serif Text", sans-serif;
@@ -23,7 +25,7 @@ li, a, button {
     text-decoration: none;
 }
 header {
-    background-color: darkolivegreen;
+    background-color: #043915;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -54,13 +56,42 @@ header {
 button{
     margin-left: 20px;
     padding: 9px 25px;
-    background-color:forestgreen ;
+    background-color:#FFFD8F ;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    color: #043915
 }
 button:hover{
     background-color:darkkhaki;
 
+}
+.parent {
+    
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.45);
+    margin-top: 4%;
+    align-self:center;
+    background-color:#B0CE88;
+    width: 60%;
+    height: 1000px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.child{
+    cursor: pointer;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 100px;
+    background-color:#4C763B;
+    width: 80%;
+    height:200px;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.child:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
