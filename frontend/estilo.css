@@ -95,3 +95,10 @@ button:hover{
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
+.teste{
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color: aliceblue; /* Fica branco */
+    font-size: 124px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    width: 100%;
+}
