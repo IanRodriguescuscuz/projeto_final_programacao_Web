@@ -1,5 +1,5 @@
 <?php
-// Se a sessão ainda não foi iniciada, inicie agora.
+// Se a sessão não existir, inicia.
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -21,8 +21,13 @@ if (!isset($_SESSION)) {
                 <li><a class="navegacao" href="sobre.php">Sobre</a></li>
                 <li><a class="navegacao" href="equipamentos.php">Equipamentos</a></li>
                 <li><a class="navegacao" href="como_pescar.php">Como pescar</a></li>
-                <li><a class="navegacao" href="login.php">Login</a></li>
-            </ul>
+
+                <?php if (isset($_SESSION['id'])): ?>
+                    <li><a class="navegacao" href="logout.php" style="color: red;">Sair</a></li>
+                <?php else: ?>
+                    <li><a class="navegacao" href="login.php">Login</a></li>
+                <?php endif; ?>
+                </ul>
         </nav>
         <a class="peixes" href="pescados.php"><button>Pescados</button></a>
     </header>
