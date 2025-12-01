@@ -8,15 +8,13 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="assets/ChatGPT Image 26 de nov. de 2025, 13_29_56.png" alt="logo">
+        <a class="logo" href="sobre.php"><img class="logo" src="assets/ChatGPT Image 26 de nov. de 2025, 13_29_56.png" alt="logo"></a>
         <nav>
             <ul class="nav_links">
-                <li><a clas="navegacao" href="#">Sobre</a></li>
-                <li><a clas="navegacao" href="#">Equipamentos</a></li>
-                <li><a clas="navegacao" href="#">Como pescar</a></li>
+                <li><a class="navegacao" href="sobre.php">Sobre</a></li>
+                <li><a class="navegacao" href="equipamentos.php">Equipamentos</a></li>
+                <li><a class="navegacao" href="como_pescar.php">Como pescar</a></li>
             </ul>
         </nav>
-        <a class="peixes"><button>Pescados</button></a>
+        <a class="peixes" href="pescados.php"><button>Pescados</button></a>
     </header>
-</body>
-</html>
