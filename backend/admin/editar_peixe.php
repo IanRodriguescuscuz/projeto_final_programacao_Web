@@ -50,7 +50,6 @@ if (isset($_POST['btn_atualizar'])) {
         $sql_update = "UPDATE peixes SET nome='$nome', descricao='$descricao', preco='$preco' WHERE id='$id'";
     }
 
-    
     if ($mysqli->query($sql_update)) {
         echo "<script>alert('Peixe atualizado!'); window.location.href='peixes.php';</script>";
     } else {
