@@ -63,7 +63,7 @@ if (isset($_POST['btn_entrar'])) {
         </form>
         
         <br>
-        <a href="sobre.php">Voltar ao site</a>
+        
     </div>
 </div>
 
