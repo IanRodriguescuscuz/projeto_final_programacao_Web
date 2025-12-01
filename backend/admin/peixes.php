@@ -70,6 +70,8 @@ $resultado = $mysqli->query($sql_busca);
         <td><?php echo $row['nome']; ?></td>
         <td><?php echo $row['preco']; ?></td>
         <td>
+            <a href="editar_peixe.php?id=<?php echo $row['id']; ?>">Editar</a>
+            | 
             <a href="delete.php?id=<?php echo $row['id']; ?>&tabela=peixes">Excluir</a>
         </td>
     </tr>
