@@ -1,5 +1,5 @@
 <?php
-// Tenta conectar. Se falhar, o script morre aqui mesmo com o die() do conexao.php
+
 include '../config/conexao.php';
 ?>
 
