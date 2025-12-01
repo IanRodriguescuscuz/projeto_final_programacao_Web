@@ -49,17 +49,17 @@ if (isset($_POST['btn_entrar'])) {
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<div class="parent">
-    <div class="child">
-        <h2>Acesse sua conta</h2>
-        <p>Digite seu email para entrar</p>
+<div class="tio">
+    <div class="primo">
+        <h2 class="titulo2">Acesse sua conta</h2>
+        <p class="paragrafo2">Digite seu email para entrar</p>
 
         <?php if(isset($erro)) echo "<p class='erro'>$erro</p>"; ?>
 
-        <form method="POST" action="">
-            <input type="email" name="email" placeholder="seu@email.com" required>
+        <form class="inputee" method="POST" action="">
+            <input class="campo" type="email" name="email" placeholder="seu@email.com" required>
             <br>
-            <button type="submit" name="btn_entrar">ENTRAR</button>
+            <button class="button2" type="submit" name="btn_entrar">ENTRAR</button>
         </form>
         
         <br>

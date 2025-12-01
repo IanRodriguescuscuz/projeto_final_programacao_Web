@@ -185,3 +185,80 @@ button:hover{
     justify-content: flex-end;
     align-items: center;
 }
+/*login*/
+
+.tio {
+    
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.45);
+    margin-top: 4%;
+    align-self:center;
+    background-color:#B0CE88;
+    width: 40%;
+    height: 500px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.primo{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 60%;
+    height:60%;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo2{
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#FFFD8F;
+    margin-top: 10px;
+    font-size: 22px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    animation: fade-up 1s;
+}
+.paragrafo2{
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#B0CE88; 
+    font-size: 15px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    margin-top: 10px;
+    animation: fade-up 2s;}
+
+.campo{
+    width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  color:#B0CE88;
+  background:#043915;
+  border-radius: 10px;
+  outline: none;
+  align-self: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.inputee{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+}
+
+.button2{
+    margin-left: 0;
+    padding: 9px 25px;
+    background-color:#FFFD8F ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #043915;
+    align-self: center;
+}
