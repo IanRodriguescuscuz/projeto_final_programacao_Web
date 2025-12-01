@@ -13,8 +13,8 @@
             <ul class="nav_links">
                 <li><a class="navegacao" href="sobre.php">Sobre</a></li>
                 <li><a class="navegacao" href="equipamentos.php">Equipamentos</a></li>
-                <li><a class="navegacao" href="#">Como pescar</a></li>
+                <li><a class="navegacao" href="como_pescar.php">Como pescar</a></li>
             </ul>
         </nav>
-        <a class="peixes"><button>Pescados</button></a>
+        <a class="peixes" href="pescados.php"><button>Pescados</button></a>
     </header>
