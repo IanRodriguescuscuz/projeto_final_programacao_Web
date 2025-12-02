@@ -93,18 +93,8 @@ button:hover{
     animation: fade-up 2s;
     display: flex;
     flex-direction: row;
-    align-items: center;
-}
-.comeco
-{
-align-self: flex-start;
-
 }
 
-.final{
-    align-self: flex-end ;
-
-}
 
 /*aqui vem os css da pagina SOBRE*/
 .child:hover {
@@ -198,16 +188,77 @@ align-self: flex-start;
     align-items: center;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.ian4{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 40%;
+    height:80%;
+    margin-bottom: 40px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-left: 30px;
+}
+.ian5{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 20px;
+    background-color:#4C763B;
+    width: 30%;
+    height:80%;
+    margin-bottom: 40px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    display: flex;
+    align-self: flex-start;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-right: 30px;
+    
+}
 .container{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: auto;
 }
+.container2{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: auto;
+    align-content: flex-start;
+}
 
 @keyframes spin {
   from { translate: 0; }
   to { translate: -100%; }
+}
+
+.textou{
+
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#FFFD8F; 
+    font-size: 16px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    width: 80%;
+    margin-top: 30px;
+    animation: fade-up 4s;
+}
+.textou2{
+
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#FFFD8F; 
+    font-size: 16px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    width: 80%;
+    margin-top: 30px;
+    animation: fade-up 4s;
+    margin-left: 30px;
 }
 
 /*como pescar*/
