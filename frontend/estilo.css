@@ -91,10 +91,35 @@ button:hover{
     margin-bottom: 10px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     animation: fade-up 2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.comeco
+{
+align-self: flex-start;
+
+}
+
+.final{
+    align-self: flex-end ;
+
 }
 
 /*aqui vem os css da pagina SOBRE*/
 .child:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.ian:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.ian2:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+.ian3:hover {
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
@@ -126,39 +151,58 @@ button:hover{
   }
 }
 
-.carousel {
-  margin: 100px auto;
-  width: 50%;
-  border-radius: 10%;
-  display: flex;
-  background-color:#4C763B;
-  overflow-x: auto;
-  scrollbar-width: none;
-  animation: fade-up 7s;
-    padding-right: 1em;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-  
-}
-
-.group{
+.ian{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 40%;
+    height:300px;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    align-self: flex-start;
+    margin-left: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    animation: spin 10s infinite linear;
-
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-.card {
-    flex: 0 0 5em;
-  height: 5em;
-  padding: 1em;
-  background:#043915;
-  font-size: 3rem;
-  border-radius: .2em;
-  text-align: center;
-  align-content: center;
+.ian2{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 40%;
+    height:300px;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    align-self: flex-end;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ian3{
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 40%;
+    height:300px;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
 }
 
 @keyframes spin {
