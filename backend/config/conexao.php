@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $senha = '';
-$db = 'banco_de_dados_peixes';
+$db = 'banco_de_dados_peixe';
 
 $mysqli = new mysqli($host, $user, $senha, $db);
 
