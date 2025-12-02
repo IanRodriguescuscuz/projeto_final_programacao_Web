@@ -20,7 +20,7 @@ include_once "topo.php";
 
                     <img class="ian5" src="assets/Jp_Cartela_De_Anzol_4330_Aco_Niquel_N6_Jau_Pesca.jpeg">
                     <div class="container">
-                    <h1 class="textou2">O anzol é a peça que fisga o peixe. Ele segura a isca e, quando o peixe morde, sua ponta curva prende na boca, permitindo que o pescador recolha a captura com segurança.</h1>
+                    <h1 class="textou10">O anzol é a peça que fisga o peixe. Ele segura a isca e, quando o peixe morde, sua ponta curva prende na boca, permitindo que o pescador recolha a captura com segurança.</h1>
                 </div>
             </div>
             </div>
