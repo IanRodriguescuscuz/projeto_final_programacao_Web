@@ -12,4 +12,6 @@ include '../config/conexao.php';
 <br><br>
 <a href="usuarios.php">2. Gerenciar Usuários</a>
 <br><br>
-<a href='../../frontend/sobre.php'>3. Home</a>
+<a href="suporte.php">3. Gerenciar Mensagens de Suporte</a>
+<br><br>
+<a href='../../frontend/sobre.php'>4. Home</a>

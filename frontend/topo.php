@@ -21,6 +21,7 @@ if (!isset($_SESSION)) {
                 <li><a class="navegacao" href="sobre.php">Sobre</a></li>
                 <li><a class="navegacao" href="equipamentos.php">Equipamentos</a></li>
                 <li><a class="navegacao" href="como_pescar.php">Como pescar</a></li>
+                <li><a class="navegacao" href="suporte.php">Suporte</a></li>
 
                 <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1): ?>
                     <li>
