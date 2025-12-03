@@ -17,7 +17,7 @@ if (isset($_POST['btn_pescar'])) {
     $sql_insert = "INSERT INTO inventario (id_usuario, id_peixe) VALUES ('$id_usuario', '$id_peixe')";
     
     if ($mysqli->query($sql_insert)) {
-        echo "<p style='color: green'>Peixe adicionado!</p>";
+        echo "<div class='baby2'><p style='color: white;justify-content: center'>Peixe adicionado!</p></div>";
     }
 }
 
@@ -32,9 +32,9 @@ if (isset($_POST['btn_remover'])) {
                    LIMIT 1";
     
     if ($mysqli->query($sql_delete)) {
-        echo "<p style='color: orange'>Uma unidade devolvida ao lago.</p>";
+        echo "<div class='baby2'><p style='color: orange'>Uma unidade devolvida ao lago.</p></div>";
     } else {
-        echo "<p style='color: red'>Erro ao remover.</p>";
+        echo "<div class='baby2'><p style='color: red'>Erro ao remover.</p></div>";
     }
 }
 
@@ -52,17 +52,19 @@ $sql_cesto = "SELECT p.id as id_peixe, p.nome, p.foto, p.preco, COUNT(i.id) as q
 $cesto = $mysqli->query($sql_cesto);
 ?>
 
-<h2>Área de Pesca</h2>
-<p>Usuário: <strong><?php echo $_SESSION['nome']; ?></strong></p>
+<div class="parent">
+
+<h2 class="titulo">Cesta de Pesca</h2>
+<p class="paragraf">Usuário: <strong><?php echo $_SESSION['nome']; ?></strong></p>
 <hr>
 
-<h3> Disponíveis para Pescar</h3>
+<h3 class="paragraf"> Disponíveis para Pescar</h3>
 
 <?php while($peixe = $vitrine->fetch_assoc()): ?>
-    <div style="border: 1px solid #ccc; padding: 10px; display: inline-block; margin: 5px; text-align: center;">
+    <div style="border: 0px solid #ccc; padding: 10px; display: inline-block; margin: 5px; text-align: center;">
         <img src="<?php echo $peixe['foto']; ?>" width="80"><br>
         <b><?php echo $peixe['nome']; ?></b><br>
-        <small>R$ <?php echo $peixe['preco']; ?></small><br>
+        
         
         <form method="POST" action="">
             <input type="hidden" name="id_peixe_selecionado" value="<?php echo $peixe['id']; ?>">
@@ -73,26 +75,23 @@ $cesto = $mysqli->query($sql_cesto);
 
 <hr>
 
-<h3>Meus Peixes Pescados</h3>
+<h3 class="paragraf">Meus Peixes Pescados</h3>
 
 <?php if($cesto->num_rows > 0): ?>
     <table border="1" style="width: 100%; text-align: center;">
         <tr>
             <th>Foto</th>
             <th>Nome</th>
-            <th>Preço Unit.</th>
-            <th>Quantidade</th> <th>Total</th>      <th>Ação</th>
+            <th>Quantidade</th> 
+            <th>Ação</th>
         </tr>
 
         <?php while($item = $cesto->fetch_assoc()): ?>
         <tr>
             <td><img src="<?php echo $item['foto']; ?>" width="50"></td>
             <td><?php echo $item['nome']; ?></td>
-            <td>R$ <?php echo $item['preco']; ?></td>
             
             <td><strong><?php echo $item['quantidade']; ?></strong></td>
-            
-            <td>R$ <?php echo number_format($item['preco'] * $item['quantidade'], 2, '.', ''); ?></td>
             
             <td>
                 <form method="POST" action="">
@@ -104,5 +103,7 @@ $cesto = $mysqli->query($sql_cesto);
         <?php endwhile; ?>
     </table>
 <?php else: ?>
-    <p>Seu cesto está vazio.</p>
+    <p class="paragraf">Seu cesto está vazio.</p>
 <?php endif; ?>
+
+</div>
