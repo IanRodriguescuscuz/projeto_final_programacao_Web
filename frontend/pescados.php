@@ -17,7 +17,11 @@ if (isset($_POST['btn_pescar'])) {
     $sql_insert = "INSERT INTO inventario (id_usuario, id_peixe) VALUES ('$id_usuario', '$id_peixe')";
     
     if ($mysqli->query($sql_insert)) {
-        echo "<div class='baby2'><p style='color: white;justify-content: center'>Peixe adicionado!</p></div>";
+        $_SESSION['msg'] = "<div class='baby2'><p style='color: white;justify-content: center'>Peixe adicionado!</p></div>";
+    
+        header("Location: pescados.php");
+        exit;
+    
     }
 }
 
@@ -32,9 +36,13 @@ if (isset($_POST['btn_remover'])) {
                    LIMIT 1";
     
     if ($mysqli->query($sql_delete)) {
-        echo "<div class='baby2'><p style='color: orange'>Uma unidade devolvida ao lago.</p></div>";
+        $_SESSION['msg'] = "<div class='baby2'><p style='color: orange'>Uma unidade devolvida ao lago.</p></div>";
+        header("Location: pescados.php");
+        exit;
     } else {
-        echo "<div class='baby2'><p style='color: red'>Erro ao remover.</p></div>";
+        $_SESSION['msg'] = "<div class='baby2'><p style='color: red'>Erro ao remover.</p></div>";
+        header("Location: pescados.php");
+        exit;
     }
 }
 
@@ -53,6 +61,13 @@ $cesto = $mysqli->query($sql_cesto);
 ?>
 
 <div class="parent">
+
+<?php
+    if(isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']); 
+    }
+    ?>
 
 <h2 class="titulo">Cesta de Pesca</h2>
 <p class="paragraf">Usuário: <strong><?php echo $_SESSION['nome']; ?></strong></p>
