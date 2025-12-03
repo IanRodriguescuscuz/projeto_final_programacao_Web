@@ -624,3 +624,69 @@ button:hover{
     color: white;
     border-left: 5px solid #FF5252;
 }
+
+/* Estilos compactos para a página de suporte reduzida */
+.suporte-compact {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px; /* espaço interno do quadro */
+    border-radius: 15px; /* igual ao .formulario-container */
+    background-color: rgba(176, 206, 136, 0.3); /* mesmo fundo do formulário */
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25); /* mesmo sombreamento do formulário */
+}
+
+.suporte-card {
+    background: rgba(76,118,59,0.95);
+    color: #FFFD8F;
+    padding: 18px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    width: 100%; /* ocupar toda a largura disponível dentro do quadro */
+    max-width: 720px; /* limita para não esticar demais em telas muito largas */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.suporte-titulo {
+    font-family: "DM Serif Text", serif;
+    color: #FFFD8F;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.suporte-itens {
+    font-family: "DM Serif Text", serif;
+    color: #FFFD8F;
+    font-size: 15px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.suporte-card a {
+    color: #FFFD8F;
+    text-decoration: underline;
+}
+
+/* Botão do mini-form dentro do cartão de suporte */
+.suporte-card .button2 {
+    background-color: #2f6f3a; 
+    color: #000000; 
+    border: none;
+    padding: 10px 32px;
+    border-radius: 999px; 
+}
+
+.suporte-card .button2:hover {
+    background-color: #25592f;
+    color: #000000;
+}
+
+@media (max-width: 800px) {
+    .parent, .suporte-compact { width: 90%; }
+    .suporte-card { width: 100%; }
+}

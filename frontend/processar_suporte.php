@@ -7,6 +7,17 @@ if (!isset($_SESSION)) {
 // Inclui a conexão com o banco de dados
 include_once "../config/conexao.php";
 
+// Define para qual página redirecionar após processamento.
+// Se o formulário enviar um campo hidden `redirect` ele terá prioridade,
+// senão tentamos usar HTTP_REFERER, em último caso volta para `suporte.php`.
+$redirect = 'suporte.php';
+if (!empty($_POST['redirect'])) {
+    $redirect = basename(parse_url($_POST['redirect'], PHP_URL_PATH));
+} elseif (!empty($_SERVER['HTTP_REFERER'])) {
+    $ref = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH);
+    $redirect = basename($ref) ?: 'suporte.php';
+}
+
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recebe os dados do formulário
@@ -19,14 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Valida os campos obrigatórios
     if (empty($nome) || empty($email) || empty($assunto) || empty($mensagem)) {
         $_SESSION['erro'] = "Por favor, preencha todos os campos obrigatórios!";
-        header("Location: suporte.php");
+        header("Location: $redirect");
         exit;
     }
     
     // Valida o email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['erro'] = "Email inválido!";
-        header("Location: suporte.php");
+        header("Location: $redirect");
         exit;
     }
     
@@ -66,11 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['erro'] = "Erro ao processar a mensagem: " . $e->getMessage();
     }
     
-    header("Location: suporte.php");
+    header("Location: $redirect");
     exit;
 } else {
     // Se não foi POST, redireciona para a página de suporte
-    header("Location: suporte.php");
+    header("Location: $redirect");
     exit;
 }
 ?>
