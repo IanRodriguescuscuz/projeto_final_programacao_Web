@@ -628,7 +628,7 @@ button:hover{
 /* Estilos compactos para a página de suporte reduzida */
 .suporte-compact {
     width: 80%;
-    margin: 30px auto;
+    margin: 20px auto 30px auto;
     display: flex;
     justify-content: center;
     padding: 30px; /* espaço interno do quadro */
