@@ -130,6 +130,17 @@ button:hover{
     animation: fade-up 4s;
     text-shadow: 1px 4px 18px rgb(0, 57, 0);
 }
+
+.paragraf{
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#043915; 
+    font-size: 22px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    width: 80%;
+    margin-top: 30px;
+    animation: fade-up 2s;
+    
+}
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -281,6 +292,24 @@ button:hover{
     margin-left: 50px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.baby2{
+    cursor: pointer;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px ;
+    margin-top: 50px;
+    background-color:#4C763B;
+    width: 40%;
+    height:100px;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fade-up 2s;
+    align-self: center;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 /*login*/
