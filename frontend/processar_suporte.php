@@ -1,4 +1,9 @@
 <?php
+// Inicia a sessão
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 // Inclui a conexão com o banco de dados
 include_once "../config/conexao.php";
 
