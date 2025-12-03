@@ -467,3 +467,10 @@ button:hover{
     margin-top: 20px;
     animation: fade-up 4s;
 }
+
+.paragrafo9{
+    font-family: "DM Serif Text", sans-serif; /* Pega a fonte certa */
+    color:#B0CE88; 
+    font-size: 15px; /* Aumenta o tamanho */
+    text-align: center; /* Garante que o texto fique no meio horizontalmente */
+    animation: fade-up 2s;}
