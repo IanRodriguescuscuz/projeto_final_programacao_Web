@@ -100,40 +100,55 @@ $cesto = $mysqli->query($sql_cesto);
         text-align:center;
         color:#FFFD8F;
         background-color:#4C763B;
-        border-collapse:separate;
-        border-spacing:0;
-        border:0;
-        overflow:hidden;
+        border-collapse:collapse;
         border-radius:12px;
+        overflow:hidden;
         box-shadow:0 2px 10px rgba(0,0,0,0.25);
     "
 >
     <tr style="background:rgba(0,0,0,0.15); font-weight:bold;">
-        <th style="padding:10px; border-bottom:1px solid rgba(0,0,0,0.25);">Foto</th>
-        <th style="padding:10px; border-bottom:1px solid rgba(0,0,0,0.25);">Espécie</th>
-        <th style="padding:10px; border-bottom:1px solid rgba(0,0,0,0.25);">Qtd.</th>
-        <th style="padding:10px; border-bottom:1px solid rgba(0,0,0,0.25);">Ação</th>
+        <th style="padding:12px;">Foto</th>
+        <th style="padding:12px;">Espécie</th>
+        <th style="padding:12px;">Qtd.</th>
+        <th style="padding:12px;">Ação</th>
     </tr>
-</table>
 
-        <?php while($item = $cesto->fetch_assoc()): ?>
-            <div style="display: flex; flex-direction:row;gap:190px; width:100%;">
-        <tr>
-            <td><img src="<?php echo $item['foto']; ?>" width="50"></td>
-            <td style="margin-left: 120px;"><?php echo $item['nome']; ?></td>
-            
-            <td><strong style="margin-left: 40px;"><?php echo $item['quantidade']; ?></strong></td>
-            
-            <td>
-                <form method="POST" action="">
+    <?php while ($item = $cesto->fetch_assoc()): ?>
+        <tr style="border-top:1px solid rgba(0,0,0,0.25);">
+            <td style="padding:10px;">
+                <img src="<?php echo $item['foto']; ?>" width="50">
+            </td>
+
+            <td style="padding:10px;">
+                <?php echo $item['nome']; ?>
+            </td>
+
+            <td style="padding:10px;">
+                <strong><?php echo $item['quantidade']; ?></strong>
+            </td>
+
+            <td style="padding:10px;">
+                <form method="POST" action="" style="display:inline;">
                     <input type="hidden" name="id_peixe_remover" value="<?php echo $item['id_peixe']; ?>">
-                    <button type="submit" name="btn_remover" style="color: red; margin-left: -115px;">➖ Remover 1</button>
+                    <button 
+                        type="submit" 
+                        name="btn_remover" 
+                        style="
+                            color:red; 
+                            font-weight:bold; 
+                            background:transparent; 
+                            border:none; 
+                            cursor:pointer;
+                        "
+                    >
+                        ➖ Remover 1
+                    </button>
                 </form>
             </td>
         </tr>
-        </div>
-        <?php endwhile; ?>
-    </table>
+    <?php endwhile; ?>
+
+</table>
 <?php else: ?>
     <p class="paragraf">Seu cesto está vazio.</p>
 <?php endif; ?>
