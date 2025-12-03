@@ -1,5 +1,8 @@
 <?php
- include_once "topo.php";
+if (!isset($_SESSION)) {
+    session_start();
+}
+include_once "topo.php";
 ?>
 
 <div class="parent">
@@ -13,10 +16,22 @@
         <h1 class="titulo3">Central de Suporte</h1>
     </div>
 
-    <!-- Seção de Contato Direto -->
     <div class="baby2">
         <div class="info-contato">
             <h2 class="subtitulo-suporte">📞 Formas de Contato</h2>
+
+            <?php if (isset($_SESSION['sucesso'])): ?>
+                <div style="background-color: #6BCB77; color: white; padding: 15px; border-radius: 5px; margin-bottom: 15px; text-align: center;">
+                    ✓ <?php echo $_SESSION['sucesso']; unset($_SESSION['sucesso']); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['erro'])): ?>
+                <div style="background-color: #FF6B6B; color: white; padding: 15px; border-radius: 5px; margin-bottom: 15px; text-align: center;">
+                    ✗ <?php echo $_SESSION['erro']; unset($_SESSION['erro']); ?>
+                </div>
+            <?php endif; ?>
+
             <div class="contato-item">
                 <strong>Email:</strong> suporte@pesca.com.br
             </div>

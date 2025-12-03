@@ -543,4 +543,57 @@ button:hover{
 .campo-textarea::placeholder {
     color: #B0CE88;
 }
---
+
+.faq-container {
+    background-color: rgba(176, 206, 136, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    margin: 30px auto 50px auto;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.25);
+    animation: fade-up 2s;
+}
+
+.faq-item {
+    background-color: #4C763B;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    animation: fade-up 2s;
+}
+
+.faq-pergunta {
+    background-color: #4C763B;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "DM Serif Text", sans-serif;
+    color: #FFFD8F;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.faq-pergunta:hover {
+    background-color: #5a8b4a;
+    transform: translateX(5px);
+}
+
+.faq-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.faq-resposta {
+    background-color: #3d5e2e;
+    padding: 20px;
+    font-family: "DM Serif Text", sans-serif;
+    color: #B0CE88;
+    font-size: 15px;
+    line-height: 1.6;
+    border-top: 2px solid #4C763B;
+    animation: fade-up 0.5s;
+}
