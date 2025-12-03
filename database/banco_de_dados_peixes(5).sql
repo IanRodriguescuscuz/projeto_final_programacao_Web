@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2025 at 03:00 PM
+-- Generation Time: Dec 03, 2025 at 04:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,11 +41,8 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id`, `id_usuario`, `id_peixe`, `data_aquisicao`) VALUES
-(6, 3, 5, '2025-12-02 10:02:39'),
-(7, 3, 5, '2025-12-02 10:02:42'),
-(8, 3, 5, '2025-12-02 10:02:43'),
-(9, 3, 5, '2025-12-02 10:02:44'),
-(10, 3, 5, '2025-12-02 10:09:58');
+(64, 7, 14, '2025-12-03 00:30:26'),
+(65, 7, 15, '2025-12-03 00:30:29');
 
 -- --------------------------------------------------------
 
@@ -66,8 +63,8 @@ CREATE TABLE `peixes` (
 --
 
 INSERT INTO `peixes` (`id`, `nome`, `descricao`, `preco`, `foto`) VALUES
-(5, 'das', 'das', 11.11, 'assets/224f937717ab62d3b81ce4d59911fcd8.jpg'),
-(6, 'das', 'das', 11.11, 'assets/36031cb7ac36a789ea072025fa6b8f60.jpg');
+(14, 'Bagre', '', 0.00, 'assets/843172ac12771b2d0e3a49fce67c6470.png'),
+(15, 'Robalo', '', 0.00, 'assets/af204b9d58a87b2af8e2eafc588477a7.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,10 +84,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `is_admin`) VALUES
-(2, 'dsadsa', 'dasadsdsa@dassda.com', 1),
-(3, 'robabrisa123', 'robabrisa@dasilva.com', 1),
 (5, 'perdi80k', 'perdi80k@dasilva.com', 0),
-(6, 'dsadsa', 'dsaadsds@gmail.com', 0),
 (7, 'daniel', 'daniel@brandao.com', 1);
 
 --
@@ -125,13 +119,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `peixes`
 --
 ALTER TABLE `peixes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
