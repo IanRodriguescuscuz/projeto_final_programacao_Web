@@ -5,8 +5,8 @@ include '../config/conexao.php';
 if (isset($_POST['btn_cadastrar'])) {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
-    $preco = $_POST['preco']; 
-
+    #$preco = $_POST['preco']; 
+    $preco = 0;
     
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
         
@@ -41,9 +41,6 @@ $resultado = $mysqli->query($sql_busca);
 
     Descrição: <br>
     <textarea name="descricao"></textarea><br><br>
-
-    Preço (use ponto): <br>
-    <input type="text" name="preco" required><br><br>
 
     Foto: <br>
     <input type="file" name="foto" required><br><br>
